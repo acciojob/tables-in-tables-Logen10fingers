@@ -1,78 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <table class="main-table">
-      <tr>
+<html>
+<head>
+    <title>Nested Tables</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 2px;
+        }
+        .black-cell {
+            background-color: black;
+            color: white;
+        }
+        a {
+            color: purple;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<table width="100%">
+    <tr>
+        <td width="50%" valign="top">
+            <table width="100%">
+                <tr>
+                    <th colspan="2">Nested Table 2</th>
+                </tr>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                </tr>
+                <tr>
+                    <td>abc</td>
+                    <td>def</td>
+                </tr>
+            </table>
+        </td>
+        <td width="50%" valign="top">
+            <table width="100%">
+                <tr>
+                    <th>Nested Table 1</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul style="text-align: left; display: inline-block; margin: 0 auto;">
+                            <li>List item</li>
+                            <li>List item</li>
+                            <li>List item</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
         <td>
-          <table class="nested-table">
-            <tr>
-              <th>Nested Table 1</th>
-              <th>Column 1</th>
-              <th>Column 2</th>
-            </tr>
-            <tr>
-              <td>Row 1</td>
-              <td>Data 1</td>
-              <td>Data 2</td>
-            </tr>
-          </table>
+            <table width="100%">
+                <tr>
+                    <th colspan="2">Nested Table 3</th>
+                </tr>
+                <tr>
+                    <td><a href="#">Nested Table</a></td>
+                    <td>Demo Continued</td>
+                </tr>
+            </table>
         </td>
         <td>
-          <table class="nested-table">
-            <tr>
-              <th>Nested Table 2</th>
-              <th>Column 1</th>
-              <th>Column 2</th>
-            </tr>
-            <tr>
-              <td>Row 1</td>
-              <td>Data A</td>
-              <td>Data B</td>
-            </tr>
-          </table>
+            <table width="100%">
+                <tr>
+                    <th>Nested Table 4</th>
+                </tr>
+                <tr>
+                    <td class="black-cell">HTML</td>
+                </tr>
+            </table>
         </td>
-      </tr>
-      <tr>
-        <td>
-          <table class="nested-table">
-            <tr>
-              <th>Nested Table 3</th>
-              <th>Column 1</th>
-              <th>Column 2</th>
-            </tr>
-            <tr>
-              <td>Row 1</td>
-              <td colspan="2">
-                <ul>
-                  <li>List item 1</li>
-                  <li>List item 2</li>
-                  <li>List item 3</li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </td>
-        <td>
-          <table class="nested-table">
-            <tr>
-              <th>Nested Table 4</th>
-              <th>Column 1</th>
-              <th>Column 2</th>
-            </tr>
-            <tr>
-              <td class="html-cell">HTML</td>
-              <td>Data X</td>
-              <td>Data Y</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
+    </tr>
+</table>
+
+</body>
 </html>
